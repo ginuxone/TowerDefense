@@ -26,7 +26,6 @@
                 this.scale.pageAlignHorizontally = true;
                 //this.stage.scale.setScreenSize(true);
 
-
             }
 
             this.game.state.start('Preloader', true, false);
