@@ -15,6 +15,8 @@
             //this.load.audio('music', 'assets/title.mp3', true);
             this.load.spritesheet('simon', 'assets/simon.png', 58, 96, 5);
             this.load.image('level1Map', 'assets/map1.png');
+            this.load.image('logoImg', 'assets/th.jpg');
+            this.load.image('MainMenuImg', 'assets/th.jpg');
 
         }
 
