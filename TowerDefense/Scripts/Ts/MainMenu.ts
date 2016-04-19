@@ -6,7 +6,7 @@
 
         create() {
 
-            this.background = this.add.sprite(0, 0, 'assets/map1.png');
+            this.background = this.add.sprite(0, 0, 'level1Map');
             this.background.alpha = 0;
 
             this.logo = this.add.sprite(this.world.centerX, -300, 'logo');

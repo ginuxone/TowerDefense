@@ -46,7 +46,7 @@ var TowerDefense;
     var Game = (function (_super) {
         __extends(Game, _super);
         function Game() {
-            _super.call(this, 800, 600, Phaser.AUTO, 'content', null);
+            _super.call(this, 800, 600, Phaser.AUTO, 'TowerDefense', null);
             this.state.add('Boot', TowerDefense.Boot, false);
             this.state.add('Preloader', TowerDefense.PreLoader, false);
             this.state.add('MainMenu', TowerDefense.MainMenu, false);
@@ -66,8 +66,8 @@ var TowerDefense;
         }
         Level1.prototype.create = function () {
             this.background = this.add.sprite(0, 0, 'level1');
-            this.music = this.add.audio('music', 1, false);
-            this.music.play();
+            //this.music = this.add.audio('music', 1, false);
+            //this.music.play();
             this.player = new TowerDefense.Player(this.game, 130, 284);
         };
         return Level1;
@@ -82,7 +82,7 @@ var TowerDefense;
             _super.apply(this, arguments);
         }
         MainMenu.prototype.create = function () {
-            this.background = this.add.sprite(0, 0, 'assets/map1.png');
+            this.background = this.add.sprite(0, 0, 'level1Map');
             this.background.alpha = 0;
             this.logo = this.add.sprite(this.world.centerX, -300, 'logo');
             this.logo.anchor.setTo(0.5, 0.5);
@@ -162,11 +162,11 @@ var TowerDefense;
             this.preloadBar = this.add.sprite(200, 250, 'preloadBar');
             this.load.setPreloadSprite(this.preloadBar);
             //  Load our actual games assets
-            this.load.image('titlepage', 'assets/map1.png');
-            this.load.image('logo', 'assets/logo.png');
-            this.load.audio('music', 'assets/title.mp3', true);
+            //this.load.image('titlepage', 'assets/map1.png');
+            //this.load.image('logo', 'assets/logo.png');
+            //this.load.audio('music', 'assets/title.mp3', true);
             this.load.spritesheet('simon', 'assets/simon.png', 58, 96, 5);
-            this.load.image('level1', 'assets/map1.png');
+            this.load.image('level1Map', 'assets/map1.png');
         };
         PreLoader.prototype.create = function () {
             var tween = this.add.tween(this.preloadBar).to({ alpha: 0 }, 1000, Phaser.Easing.Linear.None, true);

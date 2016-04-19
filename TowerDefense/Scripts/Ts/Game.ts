@@ -4,7 +4,7 @@
 
         constructor() {
 
-            super(800, 600, Phaser.AUTO, 'content', null);
+            super(800, 600, Phaser.AUTO, 'TowerDefense', null);
 
             this.state.add('Boot', Boot, false);
             this.state.add('Preloader', PreLoader, false);
