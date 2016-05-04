@@ -1,10 +1,10 @@
+window.onload = function () {
+    var game = new TowerDefense.Game();
+};
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
-window.onload = function () {
-    var game = new TowerDefense.Game();
 };
 var TowerDefense;
 (function (TowerDefense) {
@@ -82,16 +82,16 @@ var TowerDefense;
             _super.apply(this, arguments);
         }
         MainMenu.prototype.create = function () {
-            //this.background = this.add.sprite(0, 0, 'MainMenuImg');
-            //this.background.alpha = 0;
-            this.logo = this.add.sprite(this.world.centerX, -300, 'logoImg');
+            this.background = this.add.sprite(0, 0, 'MainMenuImg');
+            this.background.alpha = 0;
+            this.logo = this.add.sprite(this.world.centerX, -300, 'logo');
             this.logo.anchor.setTo(0.5, 0.5);
-            //this.add.tween(this.background).to({ alpha: 1 }, 2000, Phaser.Easing.Bounce.InOut, true);
+            this.add.tween(this.background).to({ alpha: 1 }, 2000, Phaser.Easing.Bounce.InOut, true);
             this.add.tween(this.logo).to({ y: 220 }, 2000, Phaser.Easing.Elastic.Out, true, 2000);
             this.input.onDown.addOnce(this.fadeOut, this);
         };
         MainMenu.prototype.fadeOut = function () {
-            //this.add.tween(this.background).to({ alpha: 0 }, 2000, Phaser.Easing.Linear.None, true);
+            this.add.tween(this.background).to({ alpha: 0 }, 2000, Phaser.Easing.Linear.None, true);
             var tween = this.add.tween(this.logo).to({ y: 800 }, 2000, Phaser.Easing.Linear.None, true);
             tween.onComplete.add(this.startGame, this);
         };
@@ -163,12 +163,11 @@ var TowerDefense;
             this.load.setPreloadSprite(this.preloadBar);
             //  Load our actual games assets
             //this.load.image('titlepage', 'assets/map1.png');
-            //this.load.image('logo', 'assets/logo.png');
             //this.load.audio('music', 'assets/title.mp3', true);
-            this.load.spritesheet('simon', 'assets/simon.png', 58, 96, 5);
+            //this.load.spritesheet('simon', 'assets/simon.png', 58, 96, 5);
             this.load.image('level1Map', 'assets/map1.png');
-            this.load.image('logoImg', 'assets/th.jpg');
-            this.load.image('MainMenuImg', 'assets/th.jpg');
+            this.load.image('logo', 'assets/logo.jpg');
+            this.load.image('MainMenuImg', 'assets/bckMainMenu.jpg');
         };
         PreLoader.prototype.create = function () {
             var tween = this.add.tween(this.preloadBar).to({ alpha: 0 }, 1000, Phaser.Easing.Linear.None, true);

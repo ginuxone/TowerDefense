@@ -23,8 +23,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\loader.png" />
+    <Content Include="assets\logo.jpg" />
     <Content Include="assets\map1.png" />
-    <Content Include="assets\th.jpg" />
+    <Content Include="assets\bckMainMenu.jpg" />
     <Content Include="CSS\app.css" />
     <Content Include="index.html" />
     <None Include="Scripts\_references.js" />
