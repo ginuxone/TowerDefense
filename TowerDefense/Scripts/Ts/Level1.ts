@@ -9,6 +9,8 @@
 
             this.background = this.add.sprite(0, 0, 'level1Map');
 
+            this.add.text(this.game.world.centerX, 10, "Level 1", { font: "65px Arial", fill: "#ff0044", align: "center" });
+
             //this.music = this.add.audio('music', 1, false);
             //this.music.play();
 
