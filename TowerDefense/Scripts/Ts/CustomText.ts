@@ -1,16 +1,32 @@
 ﻿module TowerDefense {
     export class CustomText extends Phaser.Text {
-        text: string;
-        game: Phaser.Game;
-        constructor(g: Game, x: number, y: number, t: string) {
-            super(g, x, y, t, { font: "65px Arial", fill: "#ff0044", align: "center" });
-            this.game = g;
-            this.text = t;
+        
+        constructor(g: Game, x: number, y: number, t: string, a: number) {
+            super(g, x, y, t, {});
+            this.setStyle(this.getStyle(a));
         }
 
-        create() {
-            var textFill = new CustomText(this.game, this.game.world.centerX, this.game.world.centerY, this.text);
-            this.game.add.existing(textFill);
-        };
+        getStyle(a: number) {
+            var style;
+            switch (a) {
+                case 0:
+                    style = { font: "50px Arial", fill: "#ff1124", align: "center" };
+                    break;
+                case 1:
+                    style = { font: "45px Arial", fill: "#ff0044", align: "center" };
+                    break;
+                case 2:
+                    style = { font: "35px Arial", fill: "#ff0044", align: "center" };
+                    break;
+                case 3:
+                    style = { font: "25px Arial", fill: "#ff0044", align: "center" };
+                    break;
+                default:
+                    style = { font: "15px Arial", fill: "#ff0044", align: "center" };
+                    break;
+            }
+            return style;
+        }
+
     }
 }
