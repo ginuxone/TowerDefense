@@ -19,6 +19,7 @@
 
             this.input.onDown.addOnce(this.fadeOut, this);
             this.addText();
+            this.addButtons();
 
         }
 
@@ -36,30 +37,48 @@
             this.game.state.start('Level1', true, false);
 
         }
+
         addText() {
+            //Instead of using this it could be better to use an img with the title
             var c = new CustomText(this.game, this.world.centerX, 0, "Main Menu",0);
             this.game.add.existing(c);
 
         }
 
-        //function removeGroup() {
-        //    this.world.remove(group);
-        //    // group.destroy();
-        //}
+        addButtons() {
+            var x = this.game.world.width-140;
+            var y = this.game.world.centerY;
 
-    //    function over() {
-    //        console.log('button over');
-    //    }
+            var btn_Easy = this.game.make.button(x, y, 'btnEasy', this.selectLvl, this,2,1,0);
+            var btn_Medium = this.game.make.button(x, y + 20, 'btnMedium', this.selectLvl, this,2,1,0);
+            var btn_Hard = this.game.make.button(x, y + 40, 'btnHard', this.selectLvl, this,2,1,0);
+            var btn_Insane = this.game.make.button(x, y + 60, 'btnInsane', this.selectLvl, this,2,1,0);
+            //var btn_Play = this.game.make.button(x - 20, y, 'btnPlay', this.sayHello("play"), this);
 
-    //    function out() {
-    //        console.log('button out');
-    //    }
+            btn_Easy.onInputOver.add(this.onHover, this);
+            btn_Medium.onInputOver.add(this.onHover, this);
+            btn_Hard.onInputOver.add(this.onHover, this);
+            btn_Insane.onInputOver.add(this.onHover, this);
 
-    //    function actionOnClick() {
+            this.game.add.existing(btn_Easy);
+            this.game.add.existing(btn_Medium);
+            this.game.add.existing(btn_Hard);
+            this.game.add.existing(btn_Insane);
+        }
 
-    //        console.log('button clicked');
+        private onHover() {
+            
+        }
 
-    //}
+        private selectLvl() {
+            this.deselectAll();
+
+        }
+        private deselectAll() {
+
+        }
+
+        
 
     }
 
