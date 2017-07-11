@@ -18,7 +18,7 @@
             var group = this.add.group();
 
             this.input.onDown.addOnce(this.fadeOut, this);
-            this.addText();
+            this.addTitle("Main Menu");
             this.addButtons();
 
         }
@@ -38,11 +38,11 @@
 
         }
 
-        addText() {
+        addTitle(value:string) {
             //Instead of using this it could be better to use an img with the title
-            var c = new CustomText(this.game, this.world.centerX, 0, "Main Menu",0);
+            var c = new CustomText(this.game, 0, 0, value, 0);
+            c.centerText(this.world.centerX);
             this.game.add.existing(c);
-
         }
 
         addButtons() {
