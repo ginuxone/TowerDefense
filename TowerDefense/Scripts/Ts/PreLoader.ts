@@ -26,7 +26,7 @@
 
         startMainMenu() {
             this.game.state.start('MainMenu', true, false);
-        }
+        } 
         preloadButtons() {
             this.load.spritesheet('btnEasy', 'assets/buttons/MainPageBtn/btnEasy/btn1.png', 200, 300);
             this.load.spritesheet('btnEasy_Hover', 'assets/buttons/MainPageBtn/btnEasy/btn1_Hover.png', 200, 300);
@@ -40,6 +40,7 @@
             this.load.spritesheet('btnInsane', 'assets/buttons/MainPageBtn/btnInsane/btn4.png', 200, 300);
             this.load.spritesheet('btnInsane_Hover', 'assets/buttons/MainPageBtn/btnInsane/btn4_Hover.png', 200, 300);
             this.load.spritesheet('btnInsane_Selected', 'assets/buttons/MainPageBtn/btnInsane/btn4_Selected.png', 200, 300);
+            this.load.spritesheet('btnStart', 'assets/buttons/MainPageBtn/btnStart.png', 200, 300);
         }
 
     }
