@@ -1,6 +1,7 @@
-﻿module TowerDefense {
+﻿module Entity {
 
     export class Player extends Phaser.Sprite {
+        hp: number;
 
         constructor(game: Phaser.Game, x: number, y: number) {
 

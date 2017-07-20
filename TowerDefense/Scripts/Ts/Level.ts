@@ -6,7 +6,7 @@
         point: number[][];
         player: Entity.Player;
         music: Phaser.Sound;
-        creep: Array<Entity.Creep>;
+        creeps: Array<Entity.Creep>;
         creepNumber: number;
 
         constructor(p: Entity.Player) {
@@ -15,6 +15,7 @@
         }
 
         create() {
+
         }
 
         AddTitle(text: string) {
