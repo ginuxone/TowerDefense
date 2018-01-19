@@ -25,7 +25,8 @@
         }
 
         run() {
-            var tween = this.game.add.tween(this.img).to({ x: [w, w, 0, 0], y: [0, h, h, 0] }, 4000, "Sine.easeInOut", true, -1, false);
+            //Fix goes here
+            //var tween = this.game.add.tween(this.img).to({ x: [w, w, 0, 0], y: [0, h, h, 0] }, 4000, "Sine.easeInOut", true, -1, false);
         }
 
         hit(hit:number) {
@@ -37,7 +38,7 @@
 
         checkSprite(sprite) {
             try {
-                if (sprite.x > this.game.width || sprite.y > this.game.height || sprite.x < 0 || sprite.y < 0 ) {
+                if (sprite.x > this.game.width || sprite.y > this.game.height || sprite.x < 0 || sprite.y < 0) {
                     this.die();
                 }
             }
