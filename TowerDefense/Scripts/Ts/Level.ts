@@ -1,5 +1,6 @@
 ﻿module TowerDefense {
-    export abstract class Level extends Phaser.State {
+    export class Level extends Phaser.State {
+        //If done generic enough there could be no need for more lvl classes
 
         background: Phaser.Sprite;
         point: number[][];
@@ -8,12 +9,13 @@
         creeps: Array<Entity.Creep>;
         creepNumber: number;
 
-        abstract create();
-        abstract SetTowersPoints(points:number[][]);
-
         constructor(p: Entity.Player) {
             super();
             this.player = p;
+        }
+
+        create() {
+
         }
 
         AddTitle(text: string) {
@@ -24,6 +26,15 @@
 
         SetBackgroundMap(name:string) {
             this.background = this.add.sprite(100, 0, name);
+        }
+
+        SetMapPoints() {
+            //AbstractMethod
+            //Has to be overriden by all lvl Clases
+        }
+
+        SetCreep(name: string) {
+
         }
     }
 }
