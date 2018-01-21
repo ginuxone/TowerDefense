@@ -8,8 +8,8 @@ And since I'm willing to dev and improve it. This could increase my skills as de
 
 I'm using the following to dev this :
 
-  *Phaser.io
-  *TypeScript
-  *HTML5
-  *CSS3
+  * Phaser.io
+  * TypeScript
+  * HTML5
+  * CSS3
 
