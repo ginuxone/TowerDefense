@@ -10,7 +10,8 @@
             this.SetCreep("Level1Creep");
 
             this.SetCreepsPath();
-            
+
+            this.SetTowersPoints();
             //this.music = this.add.audio('music', 1, false);
             //this.music.play();
 
@@ -26,6 +27,8 @@
         SetPath() {
             //Path TODO: calculate the path of the wave
         }
+        SetTowersPoints() {
 
+        }
     }
 }

@@ -13,7 +13,7 @@
         abstract SetTowersPoints(points: number[][]);
 
         constructor(p: Entity.Player) {
-            super();
+            super(); 
             this.player = p;
         }
 
